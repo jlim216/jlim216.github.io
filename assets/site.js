@@ -4,7 +4,6 @@ const email = "jblim@g.harvard.edu";
 const cvFile = "files/cv.pdf";
 
 const themeToggle = document.querySelector("[data-theme-toggle]");
-const systemTheme = matchMedia("(prefers-color-scheme: dark)");
 let selectedTheme;
 try {
   selectedTheme = localStorage.getItem("jb-site-theme");
@@ -13,7 +12,7 @@ try {
 }
 
 function applyTheme() {
-  const dark = selectedTheme === "dark" || (selectedTheme !== "light" && systemTheme.matches);
+  const dark = selectedTheme === "dark";
   document.documentElement.dataset.theme = dark ? "dark" : "light";
   themeToggle.setAttribute("aria-pressed", String(dark));
 }
@@ -21,7 +20,6 @@ function applyTheme() {
 if (themeToggle) {
   applyTheme();
   themeToggle.hidden = false;
-  systemTheme.addEventListener("change", applyTheme);
   themeToggle.addEventListener("click", () => {
     selectedTheme = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
     applyTheme();
