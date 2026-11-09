@@ -73,7 +73,7 @@ nav a[aria-current="page"] { color: var(--ink); box-shadow: 0 2px 0 var(--accent
 .interest-list > div { padding: 1.2rem 0; border-bottom: 1px solid var(--line); }
 .interest-list p { color: var(--muted); margin: 0; }
 .contact p { margin-bottom: 0; }
-.education-list { list-style: none; margin: 0; padding: 0; font-size: 1.0625rem; }
+.education-list { font-size: 1.0625rem; }
 .education-list li + li { margin-top: .35rem; }
 @media (min-width: 1200px) {
   .layout-home { max-width: 1360px; padding-right: 1rem; }
@@ -81,7 +81,7 @@ nav a[aria-current="page"] { color: var(--ink); box-shadow: 0 2px 0 var(--accent
 @media (min-width: 1312px) {
   .education-list { font-size: 1.125rem; }
 }
-.project-list, .recognition-list, .writings-list { margin: 0; padding-inline-start: 1.5rem; }
+.education-list, .project-list, .recognition-list, .writings-list { margin: 0; padding-inline-start: 1.5rem; }
 .project-list > li::marker { font-weight: 600; }
 .project + .project, .research-preview + .research-preview { margin-top: 1.5rem; }
 .project-label, .recognition-list { font-size: 1.1rem; margin-bottom: .35rem; }
