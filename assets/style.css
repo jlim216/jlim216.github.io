@@ -38,6 +38,7 @@ h3 { margin: 0 0 .45rem; font: 600 1.25rem/1.45 var(--sans); }
 .site-name { color: var(--ink); text-decoration: none; font: 600 1.15rem/1.4 var(--sans); }
 nav { display: flex; flex-wrap: wrap; align-items: center; gap: .65rem 1.6rem; }
 nav a { color: var(--muted); text-decoration: none; padding: .25rem 0; font-size: 1.1rem; }
+.soccer-ball { width: 1em; height: 1em; vertical-align: -.15em; }
 nav a[aria-current="page"] { color: var(--ink); box-shadow: 0 2px 0 var(--accent); }
 .theme-toggle { border: 1px solid var(--line); border-radius: 50%; width: 2.75rem; height: 2.75rem; padding: .6rem; background: var(--paper); color: var(--link); cursor: pointer; }
 .theme-toggle svg { display: block; width: 100%; height: 100%; }
@@ -191,6 +192,10 @@ summary { color: var(--link); cursor: pointer; width: fit-content; font-size: 1.
   .footer > div { padding: 1.2rem 1.3rem; }
 }
 @media (max-width: 360px) {
+  .masthead-inner { padding-inline: .5rem; }
+  .theme-toggle { inset-inline-end: .5rem; }
+  .masthead nav { column-gap: .125rem; }
+  .masthead nav a { font-size: .875rem; }
   .profile { grid-template-columns: 92px minmax(0, 1fr); }
   .monogram, .portrait { width: 92px; }
   .monogram { height: 92px; }
@@ -206,3 +211,41 @@ summary { color: var(--link); cursor: pointer; width: fit-content; font-size: 1.
 .teaching-list { padding-left: 1.25rem; }
 .teaching-entry > ul { padding-left: 1.4rem; margin-top: .35rem; list-style-type: circle; }
 .teaching-entry > ul > li { margin: .25rem 0; }
+
+/* Soccer photo gallery. */
+.soccer-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: .75rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.soccer-gallery img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 3px;
+}
+.soccer-gallery figure { position: relative; margin: 0; }
+.soccer-gallery figure:focus-visible { outline: 2px solid var(--link); outline-offset: 2px; }
+.soccer-gallery figcaption { padding: .35rem .5rem; font-size: .875rem; line-height: 1.35; }
+@media (hover: hover) {
+  .soccer-gallery figcaption {
+    position: absolute;
+    inset: auto 0 0;
+    border-radius: 0 0 3px 3px;
+    background: rgb(0 0 0 / .8);
+    color: #fff;
+    opacity: 0;
+  }
+  .soccer-gallery figure:hover figcaption,
+  .soccer-gallery figure:focus-visible figcaption { opacity: 1; }
+}
+.soccer-photo-team img { object-fit: contain; }
+.soccer-photo-low img { object-position: center 80%; }
+@media (min-width: 701px) {
+  .soccer-gallery { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
