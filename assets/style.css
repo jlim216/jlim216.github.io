@@ -60,6 +60,7 @@ nav a[aria-current="page"] { color: var(--ink); box-shadow: 0 2px 0 var(--accent
 .notice { color: var(--muted); font-size: .875rem; margin-top: .65rem; }
 .content { min-width: 0; }
 .intro { font-size: 1.375rem; }
+.layout-research .intro { font-size: 1.25rem; }
 .teaching-content { font: 1.375rem/1.7 var(--sans); }
 .teaching-content > h1 { font: 600 1.875rem/1.4 var(--sans); letter-spacing: 0; margin-bottom: 1.5rem; }
 .teaching-entry { margin-bottom: 1.8rem; }
