@@ -149,9 +149,22 @@ summary { color: var(--link); cursor: pointer; width: fit-content; font-size: 1.
   .monogram { height: 225px; }
 }
 @media (max-width: 700px) {
-  .masthead-inner { padding: 1rem 1.3rem; gap: 1rem; flex-wrap: wrap; }
-  nav { gap: .65rem 1.2rem; }
-  .layout { display: block; padding: 2rem 1.3rem 3rem; }
+  body { font-size: 1.125rem; }
+  .masthead-inner { position: relative; padding: .75rem 1rem; gap: .35rem; flex-direction: column; align-items: stretch; }
+  .site-name { display: flex; align-items: center; min-height: 2.75rem; margin-inline-end: 3.25rem; }
+  .masthead nav { gap: .25rem .5rem; justify-content: space-between; }
+  .masthead nav a { display: inline-flex; align-items: center; min-height: 2.75rem; font-size: 1rem; }
+  .theme-toggle { position: absolute; inset-block-start: .75rem; inset-inline-end: 1rem; }
+  .layout { display: block; padding: 1.5rem 1rem 2.5rem; }
+  .content { overflow-wrap: anywhere; }
+  .intro, .layout-research .intro, .teaching-content { font-size: 1.125rem; }
+  .section { margin-top: 2rem; }
+  .research-work .project h4 { font-size: 1.2rem; }
+  .research-work .project-label, .research-work .recognition-list { font-size: 1.0625rem; }
+  summary, .dataset-controls button { min-height: 2.75rem; }
+  summary { padding-block: .45rem; }
+  .dataset-project > h2 { font-size: 1.4rem; }
+  .dataset-gallery { grid-template-columns: minmax(0, 1fr); }
   .profile { display: grid; grid-template-columns: 116px minmax(0, 1fr); column-gap: 1rem; margin-bottom: 2.5rem; padding-bottom: 1.6rem; border-bottom: 1px solid var(--line); }
   .monogram, .portrait { grid-column: 1; grid-row: 1 / 4; width: 116px; margin: 0; font-size: 2.4rem; }
   .monogram { height: 116px; }
@@ -162,7 +175,6 @@ summary { color: var(--link); cursor: pointer; width: fit-content; font-size: 1.
   .footer > div { padding: 1.2rem 1.3rem; }
 }
 @media (max-width: 360px) {
-  .masthead-inner { flex-wrap: wrap; }
   .profile { grid-template-columns: 92px minmax(0, 1fr); }
   .monogram, .portrait { width: 92px; }
   .monogram { height: 92px; }
