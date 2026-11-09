@@ -73,17 +73,17 @@ nav a[aria-current="page"] { color: var(--ink); box-shadow: 0 2px 0 var(--accent
 .interest-list > div { padding: 1.2rem 0; border-bottom: 1px solid var(--line); }
 .interest-list p { color: var(--muted); margin: 0; }
 .contact p { margin-bottom: 0; }
-.education-list { font-size: 1.0625rem; }
+.education-list, .research-preview h3 { font-size: 1.0625rem; }
 .education-list li + li { margin-top: .35rem; }
 @media (min-width: 1200px) {
   .layout-home { max-width: 1360px; padding-right: 1rem; }
 }
 @media (min-width: 1312px) {
-  .education-list { font-size: 1.125rem; }
+  .education-list, .research-preview h3 { font-size: 1.125rem; }
 }
 .education-list, .project-list, .recognition-list, .writings-list { margin: 0; padding-inline-start: 1.5rem; }
 .project-list > li::marker { font-weight: 600; }
-.project + .project, .research-preview + .research-preview { margin-top: 1.5rem; }
+.project + .project { margin-top: 1.5rem; }
 .project-label, .recognition-list { font-size: 1.1rem; margin-bottom: .35rem; }
 .writings-list li + li { margin-top: .5rem; }
 .project h4 { color: var(--ink); font: 600 1.28rem/1.45 var(--sans); margin: 0 0 .4rem; }
@@ -100,6 +100,8 @@ nav a[aria-current="page"] { color: var(--ink); box-shadow: 0 2px 0 var(--accent
 }
 .updates { padding-left: 1.25rem; }
 .updates li { padding-left: .2rem; margin-bottom: .65rem; }
+.research-preview + .research-preview { margin-top: .45rem; }
+.research-preview h3 { margin: 0; }
 .research-preview h3 a { text-decoration: none; }
 .project > p:not(.project-label) { margin-bottom: .75rem; }
 .dataset-project { container-type: inline-size; }
@@ -160,8 +162,8 @@ summary { color: var(--link); cursor: pointer; width: fit-content; font-size: 1.
   .intro, .layout-research .intro, .teaching-content { font-size: 1.0625rem; line-height: 1.55; }
   .intro, .teaching-content > p { margin-bottom: 1rem; }
   .section { margin-top: 2rem; }
-  .research-work .project h4, .research-preview h3, .teaching-content .teaching-entry h2 { font-size: 1.125rem; }
-  .project + .project, .research-preview + .research-preview, .teaching-entry { margin-block: 1rem; }
+  .research-work .project h4, .teaching-content .teaching-entry h2 { font-size: 1.125rem; }
+  .project + .project, .teaching-entry { margin-block: 1rem; }
   .research-work .project-label, .research-work .recognition-list { font-size: 1rem; }
   summary, .dataset-controls button { min-height: 2.75rem; }
   summary { padding-block: .45rem; }
