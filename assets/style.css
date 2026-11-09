@@ -149,7 +149,7 @@ summary { color: var(--link); cursor: pointer; width: fit-content; font-size: 1.
   .monogram { height: 225px; }
 }
 @media (max-width: 700px) {
-  body { font-size: 1.125rem; }
+  body { font-size: 1.0625rem; line-height: 1.55; }
   .masthead-inner { position: relative; padding: .75rem 1rem; gap: .35rem; flex-direction: column; align-items: stretch; }
   .site-name { display: flex; align-items: center; min-height: 2.75rem; margin-inline-end: 3.25rem; }
   .masthead nav { gap: .25rem .5rem; justify-content: space-between; }
@@ -157,10 +157,12 @@ summary { color: var(--link); cursor: pointer; width: fit-content; font-size: 1.
   .theme-toggle { position: absolute; inset-block-start: .75rem; inset-inline-end: 1rem; }
   .layout { display: block; padding: 1.5rem 1rem 2.5rem; }
   .content { overflow-wrap: anywhere; }
-  .intro, .layout-research .intro, .teaching-content { font-size: 1.125rem; }
+  .intro, .layout-research .intro, .teaching-content { font-size: 1.0625rem; line-height: 1.55; }
+  .intro, .teaching-content > p { margin-bottom: 1rem; }
   .section { margin-top: 2rem; }
-  .research-work .project h4 { font-size: 1.2rem; }
-  .research-work .project-label, .research-work .recognition-list { font-size: 1.0625rem; }
+  .research-work .project h4, .research-preview h3, .teaching-content .teaching-entry h2 { font-size: 1.125rem; }
+  .project + .project, .research-preview + .research-preview, .teaching-entry { margin-block: 1rem; }
+  .research-work .project-label, .research-work .recognition-list { font-size: 1rem; }
   summary, .dataset-controls button { min-height: 2.75rem; }
   summary { padding-block: .45rem; }
   .dataset-project > h2 { font-size: 1.4rem; }
