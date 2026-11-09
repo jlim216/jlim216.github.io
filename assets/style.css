@@ -176,7 +176,8 @@ summary { color: var(--link); cursor: pointer; width: fit-content; font-size: 1.
   .teaching-list { margin-block: 0; }
   .teaching-entry { margin-bottom: .8rem; }
   .teaching-entry > ul { margin-bottom: 0; }
-  .research-work .project-label, .research-work .recognition-list { font-size: 1rem; }
+  .dataset-project > h2 { font-size: 1.125rem; }
+  .research-work .project-label, .research-work .recognition-list, .dataset-description { font-size: 1rem; }
   summary, .dataset-controls button { min-height: 2.75rem; }
   summary { padding-block: .45rem; }
   .research-work summary { font-size: 1rem; }
