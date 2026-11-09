@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="JB Lim on soccer and how it first sparked his interest in international relations.">
   <title>Soccer | JB Lim</title>
-  <link rel="stylesheet" href="assets/style.css?v=6019724e419f">
+  <link rel="stylesheet" href="assets/style.css?v=f70a97e47303">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <script src="assets/site.js?v=20261109-display" defer></script>
 </head>
@@ -86,5 +86,19 @@
     </main>
   </div>
   <footer class="footer"><div>© 2026 JB Jong Beom Lim</div></footer>
+  <script>
+    const soccerGallery = document.querySelector(".soccer-gallery");
+    const captionTap = matchMedia("(hover: none), (max-width: 700px)");
+
+    document.addEventListener("click", event => {
+      if (!captionTap.matches && event.pointerType !== "touch") return;
+      const tappedPhoto = event.target.closest(".soccer-gallery figure");
+      const openPhoto = soccerGallery.querySelector("[data-caption-open]");
+      openPhoto?.removeAttribute("data-caption-open");
+      if (tappedPhoto && tappedPhoto !== openPhoto) {
+        tappedPhoto.setAttribute("data-caption-open", "");
+      }
+    });
+  </script>
 </body>
 </html>
