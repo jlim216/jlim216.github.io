@@ -231,18 +231,21 @@ summary { color: var(--link); cursor: pointer; width: fit-content; font-size: 1.
 }
 .soccer-gallery figure { position: relative; margin: 0; }
 .soccer-gallery figure:focus-visible { outline: 2px solid var(--link); outline-offset: 2px; }
-.soccer-gallery figcaption { padding: .35rem .5rem; font-size: .875rem; line-height: 1.35; }
+.soccer-gallery figcaption {
+  position: absolute;
+  inset: auto 0 0;
+  padding: .35rem .5rem;
+  border-radius: 0 0 3px 3px;
+  background: rgb(0 0 0 / .8);
+  color: #fff;
+  font-size: .875rem;
+  line-height: 1.35;
+  opacity: 0;
+}
+.soccer-gallery figure[data-caption-open] figcaption,
+.soccer-gallery figure:focus-visible figcaption { opacity: 1; }
 @media (hover: hover) {
-  .soccer-gallery figcaption {
-    position: absolute;
-    inset: auto 0 0;
-    border-radius: 0 0 3px 3px;
-    background: rgb(0 0 0 / .8);
-    color: #fff;
-    opacity: 0;
-  }
-  .soccer-gallery figure:hover figcaption,
-  .soccer-gallery figure:focus-visible figcaption { opacity: 1; }
+  .soccer-gallery figure:hover figcaption { opacity: 1; }
 }
 .soccer-photo-team img { object-fit: contain; }
 .soccer-photo-low img { object-position: center 80%; }
